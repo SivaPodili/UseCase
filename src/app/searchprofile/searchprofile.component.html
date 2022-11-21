@@ -4,31 +4,41 @@
 
 <body>
     <div class="container">
-        <h2>
+        <h2 style="text-align:center">
             Search Profile
         </h2>
 
-
-
         <form class="SearchprofileForm">
-            <div class="form-group">
-                <input type="text" [(ngModel)]="profile.associateName" name="associateName" placeholder="Search with Name"> <br><br>
-            </div>
-            <div>
-                <button class='btn btn-primary' type="button" (click)="searchprofile()"> Search Profile</button>
-            </div>
+            <table>
+                <tr>
+                    <td style="text-align:right">
+                    
+                        <div class="form-group">
+                            Search at least with 3 chars of name.
+                            <input type="text" [(ngModel)]="profile.associateName" name="associateName"
+                                placeholder="associate name" size="50">
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <button class='btn btn-primary' type="button" (click)="searchprofile()"> Search
+                                Profile</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
 
         </form>
 
     </div>
-    <table *ngIf="showTable" >
-        <h2>Displaying Search Results</h2>
+    <table *ngIf="showTable">
+        <h2>Associate Profiles</h2>
         <tr>
-            <th>userId</th>
-            <th>associateName</th>
-            <th>associateId</th>
-            <th>mobile</th>
-            <th>email</th>
+            <th>User ID</th>
+            <th>Associate Name</th>
+            <th>Associate ID</th>
+            <th>Mobile</th>
+            <th>Email</th>
         </tr>
         <tr *ngFor="let profile of uiResponse">
             <td>{{profile.userId}}</td>
@@ -37,7 +47,7 @@
             <td>{{profile.mobile}}</td>
             <td>{{profile.email}}</td>
         </tr>
-</table>
+    </table>
 
 
 </body>

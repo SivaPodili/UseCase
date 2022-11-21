@@ -11,28 +11,28 @@
       <div class="form-group">
 
         <input class="form-control" [(ngModel)]="profile.associateName" formControlName="associateName" type="text"
-          id="associateName" name="associateName" height="50px" pattern="[A-Za-z]{5,30}" placeholder="associate Name">
+          id="associateName" name="associateName" height="50px" pattern="[A-Za-z]{5,30}" placeholder="Associate Name">
       </div>
       <div
         *ngIf="angForm.controls['associateName'].invalid && (angForm.controls['associateName'].dirty || angForm.controls['associateName'].touched)"
         class="alert alert-danger">
         <div *ngIf="angForm.controls['associateName'].errors.required">
-          Associate Name is required
+          Associate name is required
         </div>
         <div *ngIf="angForm.controls['associateName'].errors.pattern">
-          Associate Name must be minimum 5 characters and Maximum 30 characters
+          Associate name must be minimum 5 characters and maximum 30 characters
         </div>
       </div><br>
 
       <div class="form-group">
         <input class="form-control" [(ngModel)]="profile.associateId" formControlName="associateId" type="associateId"
-          id="associateId" name="associateId" placeholder="Associate Id">
+          id="associateId" name="associateId" placeholder="Associate ID">
       </div>
       <div
         *ngIf="angForm.controls['associateId'].invalid && (angForm.controls['associateId'].dirty || angForm.controls['associateId'].touched)"
         class="alert alert-danger">
         <div *ngIf="angForm.controls['associateId'].errors.required">
-          AssociateId is required.
+          Associate ID is required.
         </div>
 
       </div><br>
@@ -45,7 +45,7 @@
         *ngIf="angForm.controls['mobile'].invalid && (angForm.controls['mobile'].dirty || angForm.controls['mobile'].touched)"
         class="alert alert-danger">
         <div *ngIf="angForm.controls['mobile'].errors.required">
-          Mobile Number is required.
+          Mobile number is required.
         </div>
         <div *ngIf="angForm.controls['mobile'].errors.pattern">
           Please enter the valid mobile number

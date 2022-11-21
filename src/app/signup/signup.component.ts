@@ -18,8 +18,7 @@ export class SignupComponent implements OnInit {
   user = {
     username: "",
     email: "",
-    password: "",
-    role:""
+    password: ""
     
   }
   
@@ -38,7 +37,6 @@ export class SignupComponent implements OnInit {
       username: ['', Validators.required],
       password: ['', Validators.required],
       email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
-      role: ['', Validators.required],
     })
 
     const observable = this.userService.signupService(this.user)

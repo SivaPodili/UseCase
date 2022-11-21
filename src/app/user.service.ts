@@ -7,7 +7,7 @@ const URL="http://localhost:9090/profiletracker/api/auth";
 })
 export class UserService {
   
-  signupService(user: { username: string; email: string; password: string; role: string;}) {
+  signupService(user: { username: string; email: string; password: string;}) {
     return this.http.post(URL+'/v1/signup',user)
   }
 

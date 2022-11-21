@@ -5,13 +5,13 @@
 <body>
   <div class="container">
     <h2>
-      Sign Up Form
+      Signup Form
     </h2>
     <form [formGroup]="angForm" novalidate>
       <div class="form-group">
         <!-- <label>Username</label> -->
         <input class="form-control" [(ngModel)]="user.username" formControlName="username" type="text" id="username"
-          name="username" minlength="5" maxlength="30" width="100px" height="50px" placeholder="User Name"
+          name="username" minlength="5" maxlength="30" width="100px" height="50px" placeholder="Username"
           pattern="[A-Za-z]{5,30}">
       </div>
       <div
@@ -21,7 +21,7 @@
           Username is required
         </div>
         <div *ngIf="angForm.controls['username'].errors.pattern">
-          invalid username
+          Invalid Username
         </div>
 
       </div><br>
@@ -38,8 +38,8 @@
           Password is required.
         </div>
         <div *ngIf="angForm.controls['password'].errors.pattern">
-          Must contain at least one number, one uppercase letter, one lowercase letter, One special character and
-          minimum 8 or maxmimum 16 characters
+          Must contain at least one number, one uppercase letter, one lowercase letter, one special character and
+          minimum 8 or maximum 16 characters
         </div>
       </div><br>
       <div class="form-group">
@@ -57,21 +57,6 @@
           Invalid Email
         </div>
       </div><br>
-
-
-      <div class="form-group">
-        <!-- <label>Role</label> -->
-        <input class="form-control" [(ngModel)]="user.role" formControlName="role" type="role" id="role" name="role"
-          placeholder="Role" required>
-      </div>
-      <div
-        *ngIf="angForm.controls['role'].invalid && (angForm.controls['role'].dirty || angForm.controls['role'].touched)"
-        class="alert alert-danger">
-        <div *ngIf="angForm.controls['role'].errors.required">
-          Role is required.
-        </div>
-      </div><br>
-
 
       <button class="btn" id="button" type="button" [disabled]="angForm.pristine || angForm.invalid" (click)="signup()">
         Register

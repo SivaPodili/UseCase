@@ -5,13 +5,13 @@
 <body>
   <div class="container">
     <h2>
-      Signin Form
+      Sign in Form
     </h2>
     <form [formGroup]="angForm" novalidate>
       <div class="form-group">
         
         <input class="form-control" [(ngModel)]="user.username" formControlName="username" type="text" id="username"
-          name="username" minlength="5" maxlength="30" width="100px" height="50px" placeholder="User Name">
+          name="username" minlength="5" maxlength="30" width="100px" height="50px" placeholder="Username">
       </div>
       <div
         *ngIf="angForm.controls['username'].invalid && (angForm.controls['username'].dirty || angForm.controls['username'].touched)"

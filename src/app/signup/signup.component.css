@@ -11,10 +11,10 @@ input {
     height: auto;
 }
 
-.container {
+/* .container {
     width: 250px;
     height: auto;
-}
+} */
 
 
 body {
@@ -31,4 +31,9 @@ body {
 .btn{
     margin-left:55px;
 }
+body .container {
+    width: 250px;
+    height: 100vh;
+    background: lightpink;
+  }
 

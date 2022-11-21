@@ -11,24 +11,18 @@ input {
     height: auto;
 }
 
-.container {
-    width: 250px;
-    height: auto;
-}
-
 
 body {
 
     background-color: lightpink;
 }
 
-/* .space {
-    width: 10px;
-    height: auto;
-    display: inline-block;
-} */
 
 .btn{
     margin-left:55px;
 }
-
+body .container {
+    width: 250px;
+    height: 100vh;
+    background: lightpink;
+  }

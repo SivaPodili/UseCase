@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-const URL="http://localhost:9091/profiletracker/api/auth";
-const URL1="http://localhost:9092/profiletracker/api/auth";
+const URL="http://localhost:9091/profiletracker";
+const URL1="http://localhost:9092/profiletracker";
 @Injectable({
   providedIn: 'root'
 })
